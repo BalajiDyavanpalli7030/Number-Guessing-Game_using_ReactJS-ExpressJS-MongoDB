@@ -41,6 +41,14 @@ A simple web application for playing the number guessing game. Guess the correct
 ## Start the backend
    ```bash
    cd ../server
+  ```
+   create .env file and details
+   ```bash
+   PORT=5000
+   MONGODB_URI=mongodb://127.0.0.1:27017/game_db
+   ACCESS_TOKEN_SECERET=your$ecretKey
+   ```
+   ```bash
    npm run dev
    ```
 Visit http://localhost:3000 in your browser to play the game.
