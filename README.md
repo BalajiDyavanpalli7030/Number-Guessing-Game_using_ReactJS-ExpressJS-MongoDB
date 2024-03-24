@@ -7,7 +7,7 @@ A simple web application for playing the number guessing game. Guess the correct
 
 - `frontend/`: React.js code for the frontend
  
-- `server/`: ExpressJS code for the backend
+- `server/`: ExpressJS code for the backend 
 
 
 ## Setup and Installation
