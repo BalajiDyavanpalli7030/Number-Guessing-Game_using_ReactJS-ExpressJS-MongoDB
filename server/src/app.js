@@ -5,6 +5,7 @@ import {config} from 'dotenv'
 import cors from 'cors'
 import authRoutes from './routes/authRoutes.js'
 import gameRoutes from './routes/gameRoutes.js'
+import userUpdateRoutes from './routes/userUpdateRoutes.js'
 const app = express()
 config()
 
@@ -26,7 +27,7 @@ app.use(express.json())
 //Routes
 app.use('/auth',authRoutes)
 app.use('/game',gameRoutes)
-
+app.use('/update',userUpdateRoutes)
 mongoose.connect(process.env.MONGODB_URI)
 .then(()=>{
     console.log('Connected to MongoDB')
