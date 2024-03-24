@@ -28,7 +28,7 @@ A simple web application for playing the number guessing game. Guess the correct
    ```
 ## Install backend dependencies
    ```bash
-   cd ../backend
+   cd ../server
    npm install
    ```
 3. Run the application:
