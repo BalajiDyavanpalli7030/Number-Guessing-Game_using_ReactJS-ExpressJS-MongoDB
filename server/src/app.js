@@ -9,8 +9,19 @@ const app = express()
 config()
 
 //Middleware
+const allowedOrigins = ['http://localhost:3000']
 
-app.use(cors())
+const corsOptions = {
+    origin: function (option, callback){
+        if (allowedOrigins.includes(origin) || !origin){
+            callback(null,true);
+        }else{
+            callback(new Error('Not allowed by CORS'))
+        }
+    }
+}
+
+app.use(cors(corsOptions))
 app.use(express.json())
 //Routes
 app.use('/auth',authRoutes)
